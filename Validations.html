@@ -1,0 +1,65 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Validations</title>
+        <script>
+                const email = document.getElementById("mail");
+                email.addEventListener("input", function        (event) 
+                        {
+                            if (email.validity.typeMismatch)
+                            {
+                                email.setCustomValidity("I am expecting an e-mail address!");
+                            } else {
+                                email.setCustomValidity("");
+                            }
+                });
+        </script>
+    </head>
+    <body align="center">
+        <img src="C:\Users\yenugula\Desktop\Assignment-1\vasavi_logo.jpg" align="middle">
+        <h1>STUDENT REGISTRATION FORM</h1>
+        <form>
+        <label for="Username">User name:</label>
+        <input type="text" id="Username" name="Username" pattern="([^\s][A-z\s]+)"><br><br>
+            <label>Password :</label>
+            <input type="password" id="pass" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        <br><br>
+            <label>Email :</label>
+            <input type="email" id="mail" name="mail">
+        <br><br>
+           <label for="phone">phone :</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
+        <br><br>
+            <label>Select Languages Known: </label>
+            <input type="checkbox" id="eng" name="eng">
+            <label for="eng">English</label>
+            <input type="checkbox" id="hin" name="hin">
+            <label for="hin">Hindi</label>
+            <input type="checkbox" id="tel" name="tel">
+            <label for="tel">Telugu</label>
+        <br><br>
+            <label>Select Gender: </label>
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female">Female</label>
+            <br><br>
+            <label for="states">Select State</label>
+            <select id="states" name="states">
+                <option >Telangana</option>
+                <option>AndraPradesh</option>
+                <option>Delhi</option>
+                <option>Bombay</option>
+            </select>
+            <br><br>
+            <label>Give Your Comment :</label><br>
+            <textarea rows="6" cols="40" ></textarea><br><br>
+            <label>Select resume to upload: </label>
+            <input type="file" id="browse" name="browse"><br><br>
+            <input type="submit">
+            <input type="reset" >
+        </form>
+    </body>
+
+</html>
